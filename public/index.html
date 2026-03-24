@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilo Code Features Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kilo Code Features Dashboard</h1>
+            <p>Explore the capabilities of the AI coding agent</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#code-generation">Code Generation</a></li>
+                <li><a href="#autocomplete">Autocomplete</a></li>
+                <li><a href="#task-automation">Task Automation</a></li>
+                <li><a href="#refactoring">Refactoring</a></li>
+                <li><a href="#browser-automation">Browser Automation</a></li>
+                <li><a href="#multi-mode">Multi Mode</a></li>
+                <li><a href="#models">AI Models</a></li>
+                <li><a href="#integrations">Integrations</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="code-generation" class="feature-section">
+            <div class="container">
+                <h2>Code Generation</h2>
+                <div class="feature-content">
+                    <p>Generate code from natural language descriptions using advanced AI models.</p>
+                    <div class="demo">
+                        <textarea id="codePrompt" placeholder="Describe the code you want to generate..."></textarea>
+                        <button id="generateCodeBtn">Generate Code</button>
+                        <div id="generatedCode" class="code-output">
+                            <!-- Generated code will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="autocomplete" class="feature-section">
+            <div class="container">
+                <h2>Inline Autocomplete</h2>
+                <div class="feature-content">
+                    <p>Get intelligent code completions as you type, powered by AI.</p>
+                    <div class="demo">
+                        <textarea id="autocompleteEditor" placeholder="Start typing code here..."></textarea>
+                        <div id="autocompleteSuggestions" class="suggestions">
+                            <!-- Suggestions will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="task-automation" class="feature-section">
+            <div class="container">
+                <h2>Task Automation</h2>
+                <div class="feature-content">
+                    <p>Automate repetitive coding tasks to save time.</p>
+                    <div class="demo">
+                        <select id="taskType">
+                            <option value="">Select a task to automate...</option>
+                            <option value="create-component">Create React Component</option>
+                            <option value="setup-db">Setup Database Schema</option>
+                            <option value="api-endpoint">Create API Endpoint</option>
+                            <option value="unit-test">Generate Unit Tests</option>
+                        </select>
+                        <button id="automateTaskBtn">Automate Task</button>
+                        <div id="taskResult" class="task-output">
+                            <!-- Task results will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="refactoring" class="feature-section">
+            <div class="container">
+                <h2>Automated Refactoring</h2>
+                <div class="feature-content">
+                    <p>Refactor and improve existing code efficiently.</p>
+                    <div class="demo">
+                        <textarea id="codeToRefactor" placeholder="Paste code you want to refactor..."></textarea>
+                        <select id="refactoringType">
+                            <option value="">Select refactoring type...</option>
+                            <option value="extract-function">Extract Function</option>
+                            <option value="rename-variable">Rename Variable</option>
+                            <option value="simplify-condition">Simplify Condition</option>
+                            <option value="remove-duplicates">Remove Duplicates</option>
+                        </select>
+                        <button id="refactorCodeBtn">Refactor Code</button>
+                        <div id="refactoredCode" class="code-output">
+                            <!-- Refactored code will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="browser-automation" class="feature-section">
+            <div class="container">
+                <h2>Browser Automation</h2>
+                <div class="feature-content">
+                    <p>Automate browser tasks for testing and debugging.</p>
+                    <div class="demo">
+                        <input type="url" id="browserUrl" placeholder="Enter URL to automate..." value="https://example.com">
+                        <select id="browserAction">
+                            <option value="">Select browser action...</option>
+                            <option value="screenshot">Take Screenshot</option>
+                            <option value="fill-form">Fill Form</option>
+                            <option value="click-button">Click Button</option>
+                            <option value="extract-data">Extract Data</option>
+                        </select>
+                        <button id="browserActionBtn">Execute Browser Action</button>
+                        <div id="browserResult" class="task-output">
+                            <!-- Browser action results will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="multi-mode" class="feature-section">
+            <div class="container">
+                <h2>Multi Mode</h2>
+                <div class="feature-content">
+                    <p>Plan with Architect, Code with Coder, and Debug with Debugger.</p>
+                    <div class="mode-tabs">
+                        <button class="mode-tab active" data-mode="architect">Architect</button>
+                        <button class="mode-tab" data-mode="coder">Coder</button>
+                        <button class="mode-tab" data-mode="debugger">Debugger</button>
+                    </div>
+                    <div class="mode-content">
+                        <div id="architect-mode" class="mode-pane active">
+                            <h3>Architect Mode</h3>
+                            <p>Plan project structure, patterns, and changes before writing code.</p>
+                            <textarea id="architectInput" placeholder="Describe your project idea..."></textarea>
+                            <button id="architectBtn">Create Plan</button>
+                            <div id="architectOutput" class="mode-output">
+                                <!-- Architect plan will appear here -->
+                            </div>
+                        </div>
+                        <div id="coder-mode" class="mode-pane">
+                            <h3>Coder Mode</h3>
+                            <p>Write, edit, and understand code with AI assistance.</p>
+                            <textarea id="coderInput" placeholder="Describe what you want to code..."></textarea>
+                            <button id="coderBtn">Write Code</button>
+                            <div id="coderOutput" class="mode-output">
+                                <!-- Coder output will appear here -->
+                            </div>
+                        </div>
+                        <div id="debugger-mode" class="mode-pane">
+                            <h3>Debugger Mode</h3>
+                            <p>Hunt for bugs, analyze logs, and propose fixes.</p>
+                            <textarea id="debuggerInput" placeholder="Paste code or error logs to debug..."></textarea>
+                            <button id="debuggerBtn">Debug Code</button>
+                            <div id="debuggerOutput" class="mode-output">
+                                <!-- Debugger output will appear here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="models" class="feature-section">
+            <div class="container">
+                <h2>AI Models</h2>
+                <div class="feature-content">
+                    <p>Access 500+ AI models including Claude, GPT, Gemini, and more.</p>
+                    <div class="demo">
+                        <select id="modelSelect">
+                            <option value="">Select an AI model...</option>
+                            <option value="claude-3-5-sonnet">Claude 3.5 Sonnet</option>
+                            <option value="gpt-4o">GPT-4o</option>
+                            <option value="gemini-1-5-pro">Gemini 1.5 Pro</option>
+                            <option value="llama-3-70b">Llama 3 70B</option>
+                        </select>
+                        <input type="text" id="modelPrompt" placeholder="Enter your prompt for the model...">
+                        <button id="runModelBtn">Run Model</button>
+                        <div id="modelOutput" class="model-output">
+                            <!-- Model output will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="integrations" class="feature-section">
+            <div class="container">
+                <h2>Integrations</h2>
+                <div class="feature-content">
+                    <p>Use Kilo Code in all popular IDEs (VS Code/JetBrains), CLI, Cloud, and App Builder.</p>
+                    <div class="integration-grid">
+                        <div class="integration-item">
+                            <h3>VS Code Extension</h3>
+                            <p>Seamless integration with Visual Studio Code</p>
+                            <button class="integration-btn">Install Extension</button>
+                        </div>
+                        <div class="integration-item">
+                            <h3>JetBrains Plugin</h3>
+                            <p>Official plugin for JetBrains IDEs</p>
+                            <button class="integration-btn">Install Plugin</button>
+                        </div>
+                        <div class="integration-item">
+                            <h3>CLI Tool</h3>
+                            <p>Command-line interface for terminal usage</p>
+                            <button class="integration-btn">Install CLI</button>
+                        </div>
+                        <div class="integration-item">
+                            <h3>Cloud Agent</h3>
+                            <p>Offload agent execution to the cloud</p>
+                            <button class="integration-btn">Try Cloud</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Kilo Code Features Dashboard. Built with HTML, CSS, JavaScript, PHP, and SQLite.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
